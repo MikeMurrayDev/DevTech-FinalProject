@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wrestle-Mart</title>
+
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+    <div id="mainContainer">
+        <div id="navBar">
+            <span class="navHeader"></span>
+            <span class="cart" onclick="displayCart()">
+                <img id="cartIcon" src="./images/Shopping_cart_icon.png" alt="Shopping Cart Icon">
+                <span id="cartQuantity"></span>
+            </span>
+        </div>
+        <div id="productContainer">
+            <div id="productImage">
+                <div></div>
+                <div id="shoePictureContainer">
+                    <img id="shoePicture" src="./images/Asics Aggressors.PNG" alt="Asics Aggressors">
+                </div>
+            </div>
+            <div id="productInteraction">
+                <div id="productDetails">
+                    <div class="productInfo">ASICS Aggressors 4 Toyko Edition</div>
+                    <div class="productInfo">Rubber Sole with fabric and syntheic. Made in the USA.</div>
+                    <div class="productInfo" id="itemCost">$129.95</div>
+                </div>
+                <div id="productExtras">
+                    <span class="button">Go to Reviews.</span>
+                    <a href="#reviewsContainer">
+                        <span class="button" onclick="addItem('aggressors')">Add to Cart.</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="reviewsContainer">
+            <div class="review">
+                "I wear a size 12. Of all the shoes I own these are the thinnest in width. 
+                I like the support but they are on the edge of unusable. Just be aware." - Dan Gable
+            </div>
+            <div class="review">
+                "Great price! Shoes arrived as promised, on time and exactly as featured in pictures." - Vince Vaughn
+            </div>
+            <div class="review">
+                "WOW! These shoes are for real the coolest wrestling shoes I have ever seen. 
+                From the lacing inside the mesh to the slick solid toe, everything about is light, quick, 
+                strong, and durable. It makes you excited to get on the mat!" - William Clintan
+            </div>
+            <div class="review">
+                "Nice shoes. My son loves them. Will continue to get Mat Wizards in the future." - James Beam
+            </div>
+        <div class="review">
+                "This is a shoe that does take a little while to break in. 
+                My son uses two shoes because the practices are so hard. 
+                He has a tournament or match shoe that he uses for competition and then he 
+                has this shoe that he uses for practice. He has 2 practices a day and those practices 
+                are brutal on your shoes. These shoes hold up to the wear and tear of practices." - Karen Smith
+            </div>
+        </div>
+
+    </div>
+
+    <section class="cart-modal">
+        <div id="modal" class="modal-content">
+            <button id="close">X</button>
+            <h2>Your Cart</h2>
+            <!-- <p>Here are your items:</p> -->
+            <div>
+                <p id="itemQuantity">Quantity will go here.</p>
+            </div>
+            <div>
+                <p id="currentItems">Price will go here</p>
+            </div>
+            <div>
+                <button class="addItemButton" onclick="addItem()">Add Item</button>
+                <button class="removeItemButton" onclick="removeItem()">Remove Item</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="./js/index.js"></script>    
+</body>
+</html>
